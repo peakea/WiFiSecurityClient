@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "IOtpConfig": {
+            "description": "Config for OTP",
+            "properties": {
+                "hashAlgorithm": {
+                    "description": "The algorithm used to generate the OTP",
+                    "type": "string"
+                },
+                "issuer": {
+                    "description": "The OTP issuer",
+                    "type": "string"
+                },
+                "length": {
+                    "description": "The length of the OTP",
+                    "type": "number"
+                },
+                "passwordSecret": {
+                    "description": "The secret used to generate the OTP for the password",
+                    "type": "string"
+                },
+                "service": {
+                    "description": "The service for which the OTP is generated",
+                    "type": "string"
+                },
+                "ssidSecret": {
+                    "description": "The secret used to generate the OTP for the SSID",
+                    "type": "string"
+                },
+                "step": {
+                    "description": "The time interval for which the OTP is valid",
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "description": "WiFi client configuration interface",
+    "properties": {
+        "interfaceName": {
+            "description": "WiFi interface name",
+            "type": "string"
+        },
+        "interval": {
+            "description": "The time interval to check and update the WiFi credentials",
+            "type": "number"
+        },
+        "otp": {
+            "$ref": "#/definitions/IOtpConfig",
+            "description": "OTP configuration"
+        }
+    },
+    "type": "object"
+}

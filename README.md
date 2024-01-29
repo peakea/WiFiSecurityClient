@@ -1,6 +1,8 @@
 # WiFiSecurityClient
 Client for OTP WiFi Security https://github.com/peakea/WiFiSecurity
 
+Copy defaultConfig.json to config.json in the dist folder to get started
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
